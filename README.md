@@ -221,10 +221,40 @@ lembro de utilizar o ';'!
 Observe o seguinte loop:
 
 ```
-for 
 for file in *.fsa_nt; 
-do blastx -db /Users/rafael/Dropbox/working_folder_dropbox/Andrade_lab/IC/tutorial1_linux/Linux_tutorial/anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.1.fsa_nt -out $file.blast.txt;
+do blastx -db /LOCAL/DO/SEU/BLAST/DABASE/anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query $file -out $file.blast.txt;
 done
 ```
+**Observe que você deve inserir o local da sua base de dados do blast que você criou acima!**
 
+Esta análise deve demorar alguns minutos.
+
+Vamos tentar entender o loop!
+
+**A primeira linha leva:**
+
+'for file in *.fsa_nt'
+
+file - é a variavel que o loop vai criar. Esta variável só existirá enquanto a etapa que o loop está estiver ativa.
+*.fsa_nt - o '*' indica 'qualquer string' e como este símbulo é seguido por 'fsa_nt', isso significa: qualquer string, seguido de '.fsa_nt'.
+
+Na prática, o loop vai armazenar o nome dos arquivos terminados em '.fsa_nt' na variável 'file', executar os comandos dados para todos os arquivos que segue o padrão dado na primeira linha.
+
+**A segunda linha:**
+
+'do blastx -db /LOCAL/DO/SEU/BLAST/DABASE/anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query $file -out $file.blast.txt;'
+
+'blastx' - é o comando
+
+'-db /LOCAL/DO/SEU/BLAST/DABASE/anti_dec2016' - é o local da sua base de dados do blast
+
+'-max_target_seqs 1 -evalue 1e-5 -outfmt 6' - são algumas opções do blast q eu vou ensinar mais tarde
+
+'-query $file' - a opção '-query' é a opção que espeficifica o arquivo que vai ser utilizado como input. No nosso caso, o transcriptoma. Perceba que aqui a gente substituiu o nome do arquivo pela variável, precidido por um sinal de '$'. Esta é a forma de indicar uma variável no UNIX.
+
+'-out $file.blast.txt' - o nome do arquivo de output do blast. Veja que nós utilizamos novamente a variável '$file', seguido por uma string que indica para a gente que esse é o output do blast.
+
+Basicamente, o unix vai substituir '$file' pelo nome do arquivo em que o loop está.
+
+No final desse loop, três arquivos serão produzidos. Um para cada transcriptoma. Mas este processo pode demorar um pouco.
 
