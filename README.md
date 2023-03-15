@@ -343,6 +343,20 @@ Agora, faça a mesma sequência de comandos utilizando o '>' e redirecione para 
 Inspecione o conteúdo dos dois arquivos.
 
 
+Ta bom. Então sabemos que podemos usar '>>'. Mas lembre que qnd a gente juntar todos os arquivos, nós não vamos saber de qual arquivo cada entrada vem. Além disso, pode haver mais de uma sequência com o mesmo identificador, já que estes transcriptomas são montados de forma independente.
 
+Para isso, é uma boa ideia alterar minimamente o identificador da sequência, pq que a gente saiba facilmente de qual espécie vem esta sequência.
+
+Nós vamos alterar os identificadores das sequências com o comando 'sed'. Este comando é um dos comandos mais poderosos do unix. Este manual é um dos melhores para o 'sed': https://www.computerhope.com/unix/used.htm
+
+O 'sed' tem a seguinte sintaxe:
+
+```
+sed OPTIONS... [SCRIPT] [INPUTFILE...]
+```
+
+O script é dividido em três elementos: command, regular_expressions_find, regular_expressions_replace, tag
+
+Os comandos do 'sed' são infinitos. Cada um faz uma coisa diferente e aquele site tem a descrição de todos. Nós vamos utilizar o 'S', que é o de substituição e a tag 'G' que faz o match com TODAS as ocorrências no input.
 
 
