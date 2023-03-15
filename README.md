@@ -324,6 +324,19 @@ file_3 >> master_file
 .
 ```
 
+Observe que '>>' é diferente de '>'. Os dois redirecionam o output para um arquivo. Contudo, o comando '>' apaga o conteúdo do arquivo que o output é redirecionado, enquanto '>>' emenda o arquivo com o output.
+
+Por exemplo:
+
+Como estamos em clima de recepção, ja vai preparando o arquivo pra mandar para os bixos:
+
+```
+echo Ela é tão tudo! Ela é tão tudo! >> madagascar_refrão.txt
+echo Tudo que eu queria abraçar, beijar >> madagascar_refrão.txt
+echo Ela é tão tudo! Ela é tão tudo! >> madagascar_refrão.txt
+echo Vou partir com ela pra madagascar >> madagascar_refrão.txt
+```
+
 
 
 
