@@ -258,3 +258,14 @@ Basicamente, o unix vai substituir '$file' pelo nome do arquivo em que o loop es
 
 No final desse loop, três arquivos serão produzidos. Um para cada transcriptoma. Mas este processo pode demorar um pouco.
 
+
+## Interpretado os resultados do blast
+
+Os resultados do blast são armazenados em um arquivo de text, com formato 'tsv'. Esse formato é basicamente uma tabela, em que as colunas estão separadas por um tab.
+
+a opção '-outfmt 6' especifica quais informações são incluídas no arquivo que reporta dos resultados do blast.
+
+**Atividade:** utilize o google para encontrar quais as informações incluídas no '-outfmt 6'.
+
+
+
