@@ -265,7 +265,11 @@ Os resultados do blast são armazenados em um arquivo de text, com formato 'tsv'
 
 a opção '-outfmt 6' especifica quais informações são incluídas no arquivo que reporta dos resultados do blast.
 
-**Atividade:** utilize o google para encontrar quais as informações incluídas no '-outfmt 6'.
+**Atividades:** Utilize o google para encontrar quais as informações incluídas no '-outfmt 6'.
 
+A seguir, nós queros saber quantas das sequências do transcriptoma podem ser anticoagulante seguindo o blast. Para isso bastaria contar qnts sequências há no output do blast. Porém, mesmo utilizando a opção '-max_target_seqs 1', que em teoria especifica para o blast reportar o melhor match, qnd a diferênça entre dois matches não é significativa, o blast reporta ambos os matches. 
 
+Traduzindo, quando uma sequência é muito parecedida com duas sequências e a diferença entre a similaridade entre as sequências não é significativa, o blast vai gerar duas entradas para essa sequência. 
+
+Desta forma, nós temos que eliminar essa redundância.
 
