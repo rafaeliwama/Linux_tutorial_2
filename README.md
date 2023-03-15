@@ -288,6 +288,21 @@ O comando 'sort' reorganiza o arquivo em ordem crescente (default), as opções 
 
 O segundo comando é o 'awk' e esse programa é um inferno para entender. Ele é mais ou menos iqual o grep, que filtra o seu arquivo de várias maneiras. O 'awk' pode ser utilizado para isolar colunas em um arquivo 'tsv' ou qualquer arquivo que contenha colunas. A opção '-F' especifica qual caractere separa as colunas. No nosso caso é o tab, que é indicado pela expressão regular '/t'. E por fim, essa é a parte dificil de entender. O que está entre colchetes é o que você quer que o 'awk' faça. Nesse caso, printar a coluna $1. Para saber mais sobre o 'awk' veja um guia aqui: https://www.certificacaolinux.com.br/comando-awk-no-linux-processa-dados-guia-basico/
 
+O 'uniq' é um comando muito interessante. Ele colapsa inputs que são repetidos. Porém, ele colapsa somente inputs que sejam adjacentes um ao outro. Por exemplo:
+
+Na lista seguinte, a entrada 'aa' é seguida diretamente por outra entrada 'aa', mas a entrada 'bb' é seguida por um 'cc'.
+
+Lista:
+aa
+aa
+bb
+cc
+bb
+
+O 'uniq' colapsa 'aa', mas não colapsa bb. É exatamente por isso que nós precisamos fazer o 'sort' antes do 'uniq', para que as entradas de uma mesma sequencia estejam todas uma após a outra!
+
+**Atividade:** cheque a quantidade de sequências que podem ser anticoagulantes em cada um dos transcriptomas utilizando o exemplo da linha de comando acima.
+
 
 
 
