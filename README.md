@@ -200,6 +200,31 @@ blastx -db anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.
 blastx -db anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.1.fsa_nt -out GIWB01.1.fsa_nt.blast.txt
 ```
 
-Isso funcionaria, mas há uma forma melhor e mais rápida!
+Isso funcionaria, mas há uma forma melhor e mais rápida! Os 'for' loops.
+
+For loops utilizam a seguinte sintaxe
+
+'for VARIABLE in LOCATION; 
+do COMMAND; 
+do COMMAND; 
+do COMMAND; 
+done'
+
+Onde:
+
+VARIABLE - É um local de armazenamento abastrato. Você pode armazenar qualquer tipo de informação em uma variável. Um número. Uma string. Uma lista. Etc. Se você utilizar a sintaxe do for loop, a variável será criada automaticamente utilizando a palavra seguinte ao 'for'.
+do COMMAND - São os commandos que você quer executar. Você pode executar quantos comandos quiser em sequência.
+done - indica o final do loop.
+
+lembro de utilizar o ';'!
+
+Observe o seguinte loop:
+
+```
+for 
+for file in *.fsa_nt; 
+do blastx -db /Users/rafael/Dropbox/working_folder_dropbox/Andrade_lab/IC/tutorial1_linux/Linux_tutorial/anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.1.fsa_nt -out $file.blast.txt;
+done
+```
 
 
