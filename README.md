@@ -336,6 +336,10 @@ echo Tudo que eu queria abraçar, beijar >> madagascar_refrão.txt
 echo Ela é tão tudo! Ela é tão tudo! >> madagascar_refrão.txt
 echo Vou partir com ela pra madagascar >> madagascar_refrão.txt
 ```
+Agora, faça a mesma sequência de comandos utilizando o '>' e redirecione para um arquivo madagascar_refrão_2.txt
+
+Inspecione o conteúdo dos dois arquivos.
+
 
 
 
