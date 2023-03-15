@@ -329,6 +329,8 @@ Observe que '>>' é diferente de '>'. Os dois redirecionam o output para um arqu
 Por exemplo:
 
 Como estamos em clima de recepção, ja vai preparando o arquivo pra mandar para os bixos:
+![madagascar](https://user-images.githubusercontent.com/46658489/225446995-ea2cca17-925c-481a-bf9a-9197d7694b6d.jpg)
+
 
 ```
 echo Ela é tão tudo! Ela é tão tudo! >> madagascar_refrão.txt
