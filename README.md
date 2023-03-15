@@ -199,3 +199,7 @@ blastx -db anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.
 blastx -db anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.1.fsa_nt -out GIVY01.1.fsa_nt.blast.txt
 blastx -db anti_dec2016 -max_target_seqs 1 -evalue 1e-5 -outfmt 6 -query GBRF01.1.fsa_nt -out GIWB01.1.fsa_nt.blast.txt
 ```
+
+Isso funcionaria, mas há uma forma melhor e mais rápida!
+
+
