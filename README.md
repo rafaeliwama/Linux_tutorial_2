@@ -164,5 +164,19 @@ anti_dec2016.fasta	anti_dec2016.psq
 Veja que o 'makeblastdb' criou vários arquivos com o prefixo 'anti_dec2016'. Estes arquivos compõe a base de dados utilizada.
 
 
-agora, nós vamos utilizar o blast para identificar 
+Agora, nós vamos utilizar o blast para identificar as sequências contidas em três transcriptomas de sanguessugas. Então, primeiro nós precisamos baixar os transcriptomas, que para facilitar eu coloquei aqui no GitHub.
+
+
+Passos:
+1. Para baixar, clone este repositório no seu 'home' directory
+
+```
+git clone https://github.com/rafaeliwama/Linux_tutorial_2.git
+```
+
+2. Vá para a pasta '~/Linux_tutorial_2/transcriptomes_tutorial'
+
+3. faça a descompmressão dos arquivos contidos na pasta com 'gunzip' e inspecione os arquivos com 'head' e 'tail'.
+
+**Pergunta:** Qual o tipo de sequência contido nos arquivos fasta que contém os transcriptomas de sanguessugas?
 
