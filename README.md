@@ -271,5 +271,23 @@ A seguir, nós queros saber quantas das sequências do transcriptoma podem ser a
 
 Traduzindo, quando uma sequência é muito parecedida com duas sequências e a diferença entre a similaridade entre as sequências não é significativa, o blast vai gerar duas entradas para essa sequência. 
 
-Desta forma, nós temos que eliminar essa redundância, mas nós queremos manter o melhor hit. Para isso, nós precisamos do menor e-value que é a coluna 11
+Desta forma, nós temos que eliminar essa redundância, mas nós queremos manter o melhor hit. Para isso, nós precisamos do hit com menor e-value que é a coluna 11
+
+Nós usaremos 4 comandos em série para: 'sort', 'awk', 'uniq' e 'wc'.
+
+
+```
+sort -k1 -k12 GBRF01.1.fsa_nt.blast.txt | awk -F '\t' '{print $1}' | uniq | wc -l
+```
+
+Note que nós adicionamos um elemento que nunca foi utilizado antes.
+
+O caractere '|' chama-se pipe. O pipe é abreviação para pipeline e ele possibilita a utilização de varios comandos em série. Basicamente ele redireciona o output do comando anterior para o próximo.
+
+O comando 'sort' reorganiza o arquivo em ordem crescente (default), as opções '-k1' e '-k2' indicam que as colunas 1 e 2 serão utilizadas para fazer o sort, mas o sort ocorrerá primeiro na coluna 1.
+
+O segundo comando é o 'awk' e esse programa é um inferno para entender. Ele é mais ou menos iqual o grep, que filtra o seu arquivo de várias maneiras. O 'awk' pode ser utilizado para isolar colunas em um arquivo 'tsv' ou qualquer arquivo que contenha colunas. A opção '-F' especifica qual caractere separa as colunas. No nosso caso é o tab, que é indicado pela expressão regular '/t'. E por fim, essa é a parte dificil de entender. O que está entre colchetes é o que você quer que o 'awk' faça. Nesse caso, printar a coluna $1. Para saber mais sobre o 'awk' veja um guia aqui: https://www.certificacaolinux.com.br/comando-awk-no-linux-processa-dados-guia-basico/
+
+
+
 
