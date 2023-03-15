@@ -359,4 +359,6 @@ O script é dividido em três elementos: command, regular_expressions_find, regu
 
 Os comandos do 'sed' são infinitos. Cada um faz uma coisa diferente e aquele site tem a descrição de todos. Nós vamos utilizar o 'S', que é o de substituição e a tag 'G' que faz o match com TODAS as ocorrências no input.
 
+```
 
+```
