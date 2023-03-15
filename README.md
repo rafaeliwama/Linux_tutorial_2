@@ -359,6 +359,30 @@ O script é dividido em três elementos: command, regular_expressions_find, regu
 
 Os comandos do 'sed' são infinitos. Cada um faz uma coisa diferente e aquele site tem a descrição de todos. Nós vamos utilizar o 'S', que é o de substituição e a tag 'G' que faz o match com TODAS as ocorrências no input.
 
-```
+Relação de espécies, respectivos identificadores e prefixos:
+
+Hirudo medicinalis - GBRF01 - HirMed
+Americobdella valdiviana - GIVY01 - AmeVal
+Patagoniobdella sp. - GIWB01 - PatSp
+
+Nós vamos adicionar os prefixos nos identificadores de cada entrada na output do blast.
+
 
 ```
+sed -i 's/GBRF/HirMed_GBRF/g' GBRF01.1.fsa_nt.blast.txt
+```
+
+A opção '-i' escreve o output do sed no próprio arquivo.
+
+**Atividade:** faça as substituições nos outros arquivos com a tabela acima e junto todos os arquivos em um master_blast_table.tsv.
+
+Blz! Agora, quantas dessas sequências possuem hits contra anticoagulantes que têm a função testada?
+
+Nós precisamos procurar por sequências com o hits contra as sequências naquela lista que nós geramos no tutorial anterior. É facil. É só usar o grep.
+
+```
+grep -f anticogs_tested.txt master_blast_table.tsv > true_anticogs.tsv
+```
+
+
+
