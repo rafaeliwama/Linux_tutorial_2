@@ -293,10 +293,15 @@ O 'uniq' é um comando muito interessante. Ele colapsa inputs que são repetidos
 Na lista seguinte, a entrada 'aa' é seguida diretamente por outra entrada 'aa', mas a entrada 'bb' é seguida por um 'cc'.
 
 Lista:
+
 aa
+
 aa
+
 bb
+
 cc
+
 bb
 
 O 'uniq' colapsa 'aa', mas não colapsa bb. É exatamente por isso que nós precisamos fazer o 'sort' antes do 'uniq', para que as entradas de uma mesma sequencia estejam todas uma após a outra!
