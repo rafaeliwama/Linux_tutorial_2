@@ -180,3 +180,20 @@ git clone https://github.com/rafaeliwama/Linux_tutorial_2.git
 
 **Pergunta:** Qual o tipo de sequência contido nos arquivos fasta que contém os transcriptomas de sanguessugas?
 
+
+As sequências contidas nesse arquivo estão identificadas pela ordem em que elas foram montadas pelo softaware trinity. Eu vou explicar melhor o que esse programa faz, mas basicamente ele junta sequencias pequenas, de 100-150 nts em sequencias que representam sequencias de RNA.
+
+Agora, nós vamos utilizar o software 'blastx' para anotar estas sequências.
+
+
+## utilizando 'for' loops
+
+Para você descomprimir os transcriptomas, você preciosu digitar três vezes o comando 'gunzip' e o nome do arquivo. Esta estratégia é inviável quando nós precisamos utilizar o mesmo comando para dezenas, centenas ou milhares de arquivos ou items. Nós podemos automatizar esse processo utilizando uma sintaxe chamada de 'for' loops.
+
+'for' loops repetem a mesma sequência de comandos diversas vezes em um subset dos seus arquivos ou items.
+
+Por exemplo, para executar o comando blastx você teria que executar os três comandos seguintes:
+
+```
+
+```
