@@ -384,5 +384,22 @@ Nós precisamos procurar por sequências com o hits contra as sequências naquel
 grep -f anticogs_tested.txt master_blast_table.tsv > true_anticogs.tsv
 ```
 
+A opção '-f' faz com que os padrões de input do grep sejam lidos de um arquivo (aquela lista), e a gente redireciona os resultados para o true_anticogs.tsv. Inspecione o arquivo true_anticogs.tsv e conte quantas sequencias estão contidas nele.
+
+## O que vc aprendeu:
+
+1. O básico sobre instalar softwares utilizando as linhas de comando;
+
+2. Utilizar o Blast;
+
+3. Utilização de loops;
+
+4. Comandos 'sort', 'awk' e 'uniq';
+
+5. O comando 'sed'
+
+6. Concatenamento de arquivos com '>>'
+
+7. Como criar um arquivo com a letra de madagascar.
 
 
