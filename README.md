@@ -271,5 +271,5 @@ A seguir, nós queros saber quantas das sequências do transcriptoma podem ser a
 
 Traduzindo, quando uma sequência é muito parecedida com duas sequências e a diferença entre a similaridade entre as sequências não é significativa, o blast vai gerar duas entradas para essa sequência. 
 
-Desta forma, nós temos que eliminar essa redundância.
+Desta forma, nós temos que eliminar essa redundância, mas nós queremos manter o melhor hit. Para isso, nós precisamos do menor e-value que é a coluna 11
 
