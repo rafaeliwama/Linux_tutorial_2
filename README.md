@@ -292,7 +292,7 @@ O 'uniq' é um comando muito interessante. Ele colapsa inputs que são repetidos
 
 Na lista seguinte, a entrada 'aa' é seguida diretamente por outra entrada 'aa', mas a entrada 'bb' é seguida por um 'cc'.
 
-Lista:
+**Lista:**
 
 aa
 
@@ -304,9 +304,25 @@ cc
 
 bb
 
+
 O 'uniq' colapsa 'aa', mas não colapsa bb. É exatamente por isso que nós precisamos fazer o 'sort' antes do 'uniq', para que as entradas de uma mesma sequencia estejam todas uma após a outra!
 
 **Atividade:** cheque a quantidade de sequências que podem ser anticoagulantes em cada um dos transcriptomas utilizando o exemplo da linha de comando acima.
+
+## Concatenando arquivos
+
+Para facilitar a nossa vida, é muito comum nós concatenarmos, juntar, vários arquivos em um único. Isso evita que nós tenhamos que manter vários arquivos. Vira uma bagunça quando a gente tem muitos arquivos. Esse arquivo concatenado, é normalmente chamado de 'master file', porque contém a toda a informação de um determinado projeto.
+
+concatenar arquivos é super fácil. nós utilizamos a seguinte sintaxe:
+
+```
+file_1 >> master_file
+file_2 >> master_file
+file_3 >> master_file
+.
+.
+.
+```
 
 
 
