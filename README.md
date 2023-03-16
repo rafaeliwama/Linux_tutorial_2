@@ -1,11 +1,4 @@
 # Tutorial Linux 2
-
-
-Antes seguir para os próximos passos, vamos fazer mais alguns exercícios com o grep.
-
-É possível executar o comando 'grep -E' simplesmente executando o comando 'egrep'. Desta forma, todos os exemplos utilizarão a forma 'egrep'.
-
-
 ## Blast. Uma ferramenta para identificar sequências homólogas
 
 Da mesma forma que nós podemos estabelecer relações de homologia entre estruturas morfológicas, é possível estabelecer relações de homologia entre sequências. Por exemplo, a hemoglobina de humanos é homóloga à hemoglobina de chipanzés. O conceito de homologia em moléculas, no entando, é um pouco mais complexo. Foge do objetivo deste tutorial abordar este conceito, mas nós um uso importante do conceito de homologia entre sequências é a identificação de sequências.
